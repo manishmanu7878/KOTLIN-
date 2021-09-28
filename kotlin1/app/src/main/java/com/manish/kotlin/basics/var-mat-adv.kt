@@ -14,7 +14,7 @@ fun fnDemo() {
     fun hi() {
         println("dt is ${dt}")
     }
-    val fn = fun(n1: Int , n2: Int): Int {
+    val fn: (num1: Int, num2: Int)-> Int = fun(n1: Int , n2: Int): Int {
         val amt = 45
         return n1 * n2 + dt + amt
 
@@ -23,10 +23,25 @@ fun fnDemo() {
     println(fn)
     println(fn(10,20))
 }
+fun outer(): (n1: Int) -> String {
+    /*
+        if variable holds integer value its type is Int, so
+        if variable holds function value, what its type would be ?
+     */
+
+    return fun(n: Int): String {
+        return "abc"
+    }
+}
 
 fun main() {
     objDemo()
 
     fnDemo()
+    val fn = outer()
+    val str = fn(10)
+
+    println(fn)
+    println(str)
 
 }
