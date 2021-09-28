@@ -25,6 +25,10 @@ fun defaultValues(
 
 infix fun Int.sq(n: Int) = n * n
 
+fun multiple(vararg strs: String) {
+    println(strs.contentToString())
+}
+
 fun main() {
     val ab = simple()
     println("ab is $ab")
@@ -38,5 +42,10 @@ fun main() {
     println("defaultValue(num2=878) ${defaultValues(num2 = 878)}")
 
     println("Square is ${1 sq 2}")
-    println("Square is ${1.sq (2)}")
+    println("Square is ${1.sq(2)}")
+
+    multiple("one")
+    multiple("one, two")
+    multiple("one, two, three")
+    multiple("one , two , three , four")
 }
