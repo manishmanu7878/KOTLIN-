@@ -23,6 +23,8 @@ fun defaultValues(
 
 }
 
+infix fun Int.sq(n: Int) = n * n
+
 fun main() {
     val ab = simple()
     println("ab is $ab")
@@ -34,4 +36,7 @@ fun main() {
     println("defaultValues(89,56) ${defaultValues(89, 56)}")
     println("defaultValues(num2 = 4555, num1= 10) ${defaultValues(num2 = 4555, num1 = 10)}")
     println("defaultValue(num2=878) ${defaultValues(num2 = 878)}")
+
+    println("Square is ${1 sq 2}")
+    println("Square is ${1.sq (2)}")
 }
