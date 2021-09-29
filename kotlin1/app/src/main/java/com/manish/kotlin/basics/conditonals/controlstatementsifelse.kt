@@ -15,15 +15,39 @@ fun demo1() {
 fun demo2() {
     println("enter your version:")
     val os = readLine()
-    when(os) {
+    when (os) {
         "10" -> println("oreo")
         "9" -> println("pie")
-        "8","7" -> println("jelly bean")
+        "8", "7" -> println("jelly bean")
         else -> println("android")
     }
 
 }
+fun demo3() {
+    println("Enter Name:")
+    val nm = readLine()
+    val info = if (nm.equals("android")) 10 else 30
+    val dt = when(nm) {
+        "123" -> 123
+        else -> 23
+    }
+    println(" info $info dt $dt")
+}
+
+fun demo4() {
+    println("Enter your number")
+    val safeNums = intArrayOf(45, 89, 50)
+    val num = readLine()
+
+    when(num) {
+        in 1..10 -> println("it is in range")
+        !in 96..100 -> println("it is not in safe range")
+        in safeNums -> println("it is in safe range")
+        else -> println("invalid number")
+    }
+}
+
 fun main() {
-    demo2()
+    demo4()
 
 }
