@@ -1,4 +1,5 @@
 package com.manish.kotlin.basics.conditonals
+import java.util.*
 
 fun demo1() {
     println("enter your version:")
@@ -35,14 +36,20 @@ fun demo3() {
 }
 
 fun demo4() {
-    println("Enter your number")
+
     val safeNums = intArrayOf(45, 89, 50)
-    val num = readLine()
+    val `when` = 10
+    println("When is ${`when`}")
+
+    val sc = Scanner(System.`in`)
+    println("Enter your Number")
+    val num = sc.nextInt()
+
 
     when(num) {
         in 1..10 -> println("it is in range")
-        !in 96..100 -> println("it is not in safe range")
         in safeNums -> println("it is in safe range")
+        !in 96..100 -> println("it is not in safe range")
         else -> println("invalid number")
     }
 }
