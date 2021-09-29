@@ -1,0 +1,15 @@
+package com.manish.kotlin.basics.clsobj
+
+class car {
+    var speed = 10
+    fun speedUp() = speed++
+    fun putNthGear(n: Int) {
+        println("speed is ${speedUp() * n}")
+    }
+}
+
+fun main() {
+    val c = car()
+    c.speedUp()
+    c.putNthGear(2)
+}
