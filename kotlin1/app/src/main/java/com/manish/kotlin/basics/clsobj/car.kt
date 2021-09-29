@@ -2,7 +2,7 @@ package com.manish.kotlin.basics.clsobj
 
 class car {
     var speed = 10
-    fun speedUp() = speed++
+    fun speedUp() = ++speed
     fun putNthGear(n: Int) {
         println("speed is ${speedUp() * n}")
     }
@@ -10,6 +10,6 @@ class car {
 
 fun main() {
     val c = car()
-    c.speedUp()
+    println("Speed is ${c.speedUp()}")
     c.putNthGear(2)
 }
