@@ -1,6 +1,7 @@
 package com.manish.kotlin.basics.collections
 
-import java.util.LinkedList
+import java.util.*
+
 
 private fun demo1(){
     val list = LinkedList<String>()
@@ -86,6 +87,22 @@ fun demo5() {
     })
 }
 
+fun demo6() {
+    val set = setOf<String?>("abc", null, "zxv", "pqr", "hij" ,"abc", "lmn")
+    set.forEach(::println)
+
+    val set1 = setOf<String?>("abc","zxv", "pqr", "hij" ,"abc", "lmn")
+    val arr = set1.toTypedArray()
+    val sortedSet = TreeSet<String>(set1)
+    sortedSet.forEach(::println)
+
+    println("---------------------")
+    println(arr.contentToString())
+    Arrays.sort(arr)
+    println(arr.contentToString())
+}
+
+
 fun main() {
-    demo5()
+    demo6()
 }
