@@ -25,6 +25,10 @@ fun defaultValues(
 
 infix fun Int.sq(n: Int) = n * n
 
+//infix fun Unit.sq(ch : String) = ch.toCharArray(
+
+
+)
 fun multiple(vararg strs: String) {
     println(strs.contentToString())
 }
