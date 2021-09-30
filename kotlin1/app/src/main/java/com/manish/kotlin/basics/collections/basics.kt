@@ -71,6 +71,20 @@ private fun demo4() {
     println(squared)
     println(sqd)
 }
+fun myFn(n : Int) : Unit {
+
+}
+
+fun demo5() {
+    val list = listOfNotNull(1, 89, 56, 42, 6, 78, 96, 10)
+    list.forEach(::println) // method reference
+    list.forEach(::myFn) // method reference
+    list.forEach({ el -> print(el) }) // lambda
+    list.forEach{ print(it) } // lambda
+    list.forEach(fun(n : Int){ // anonymous
+        print(n)
+    })
+}
 
 fun main() {
     demo4()
