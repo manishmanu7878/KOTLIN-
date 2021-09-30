@@ -101,8 +101,27 @@ fun demo6() {
     Arrays.sort(arr)
     println(arr.contentToString())
 }
+fun demo7() {
+    val kvDs = HashMap<Int, String>()
+    kvDs.put(1, "abc")
+    kvDs[2]= "pqr"
+    kvDs[3]= "lmn"
+    kvDs[4]= "xyz"
+    kvDs[5]= "def"
+    kvDs[6]= "hij"
+    kvDs[8]= "hij"
+
+    kvDs.entries.forEach {
+            entry -> println("Key - ${entry.key} Value - ${entry.value}")
+    }
+    kvDs.entries.forEach(::println)
+
+    for ( (k,v) in kvDs ) {
+        println("Key - $k Value - $v")
+    }
+}
 
 
 fun main() {
-    demo6()
+    demo7()
 }
