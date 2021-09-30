@@ -3,7 +3,7 @@ package com.manish.kotlin.basics.generics
 import java.util.Date
 
 fun demo8() {
-    private class Box<T, U>(
+    class Box<T, U>(
     val t : T,
     val u : U
 ) {
