@@ -2,7 +2,8 @@ package com.manish.kotlin.basics.generics
 
 import java.util.Date
 
-private class Box<T, U>(
+fun demo8() {
+    private class Box<T, U>(
     val t : T,
     val u : U
 ) {
@@ -12,6 +13,21 @@ private class Box<T, U>(
 
     fun getDu() : U {
         return u
+    }
+}
+}
+fun demo9() {
+    private class Box<in T, out U>(
+        private val t : T,
+        private val u : U
+    ) {
+
+        fun calc(t : T)  { // t used as input to the function
+        }
+
+        fun getDu() : U { // u used to output/return from the function
+            return u
+        }
     }
 }
 
