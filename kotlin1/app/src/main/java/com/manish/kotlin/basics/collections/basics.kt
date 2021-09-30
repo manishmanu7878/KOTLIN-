@@ -77,15 +77,15 @@ fun myFn(n : Int) : Unit {
 
 fun demo5() {
     val list = listOfNotNull(1, 89, 56, 42, 6, 78, 96, 10)
-    list.forEach(::println) // method reference
-    list.forEach(::myFn) // method reference
-    list.forEach({ el -> print(el) }) // lambda
-    list.forEach{ print(it) } // lambda
-    list.forEach(fun(n : Int){ // anonymous
+    list.forEach(::println)
+    list.forEach(::myFn)
+    list.forEach({ el -> print(el) })
+    list.forEach{ print(it) }
+    list.forEach(fun(n : Int){
         print(n)
     })
 }
 
 fun main() {
-    demo4()
+    demo5()
 }
