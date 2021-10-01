@@ -1,5 +1,6 @@
 package com.manish.kotlin.basics.asynchronousprogramming
 
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -56,6 +57,31 @@ private suspend fun demoCode() {
         println(i)
     }
 }
+
+private fun demo4() {
+    runBlocking {
+        demoCoScp()
+    }
+}
+
+private suspend fun demoCoScp() {
+    coroutineScope {
+        println("one")
+        println("two")
+        launch {
+            println("three")
+            println("four")
+        }
+        println("five")
+        println("six")
+    }
+}
 fun main() {
-    demo3()
+    demo4()
+    val t1 = Thread {
+
+    }
+    t1.start()
+    t1.suspend()
+    t1.state
 }
