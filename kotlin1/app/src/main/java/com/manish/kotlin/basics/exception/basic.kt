@@ -60,6 +60,12 @@ private fun demo4() {
     val age = try { readLine()?.toInt()  } catch (e : Exception) { 0 }
     println("You Entered : $age")
 }
+private fun demo5() : Nothing {
+
+    val age = readLine()?.toInt() ?: throw Exception()
+
+    throw Exception()
+}
 
 fun main() {
     demo4()
