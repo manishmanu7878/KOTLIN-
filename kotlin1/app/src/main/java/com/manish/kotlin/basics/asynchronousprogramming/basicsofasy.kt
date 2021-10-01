@@ -1,5 +1,6 @@
-package com.manish.kotlin.basics.asynchronous
+package com.manish.kotlin.basics.asynchronousprogramming
 
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -42,6 +43,19 @@ private fun demo2() {
         println("ten")
     }
 }
+
+private fun demo3() {
+    runBlocking {
+        launch { demoCode() }
+    }
+}
+
+private suspend fun demoCode() {
+    for(i in 1..100) {
+        delay(1000)
+        println(i)
+    }
+}
 fun main() {
-    demo2()
+    demo3()
 }
