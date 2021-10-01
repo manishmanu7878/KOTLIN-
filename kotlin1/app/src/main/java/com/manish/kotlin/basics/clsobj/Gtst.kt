@@ -1,6 +1,6 @@
 package com.manish.kotlin.basics.clsobj
 
-class Gtst(
+private class Gtst(
     private var xPos : Int
 ) {
     var x : Int
@@ -8,7 +8,7 @@ class Gtst(
     set(value) { this.xPos = value }
 
 }
-class SubVisibility : Visibility() {
+private class SubVisibility : Visibility() {
     fun sb() {
         y = 25
     }

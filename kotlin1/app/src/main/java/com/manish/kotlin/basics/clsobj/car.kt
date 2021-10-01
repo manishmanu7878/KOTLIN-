@@ -1,6 +1,6 @@
 package com.manish.kotlin.basics.clsobj
 
-class car {
+private class car {
     var speed = 10
     fun speedUp() = ++speed
     fun putNthGear(n: Int) {
